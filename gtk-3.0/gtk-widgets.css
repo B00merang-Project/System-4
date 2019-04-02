@@ -2104,26 +2104,28 @@ messagedialog {
     background-color: @titlebar_bg_color; }
   .titlebar .titlebutton.close, .titlebar .titlebutton.maximize, .titlebar .titlebutton.minimize, .titlebar .titlebutton:not(separator) {
     padding: 0;
+    min-height: 17px;
+    min-width: 17px;
     border-radius: 0;
     border: none;
     color: transparent;
     background-color: @titlebar_bg_color;
     -gtk-icon-shadow: none;
-    background-size: 11px 11px;
+    box-shadow: 0 0 0 1px @titlebar_bg_color;
     background-position: center center;
     background-repeat: no-repeat; }
   .titlebar .titlebutton.close {
-    background-image: url("assets/close.png"); }
+    background: url("assets/close.png") no-repeat no-repeat; }
     .titlebar .titlebutton.close:backdrop {
-      background-image: none; }
+      background: none; }
   .titlebar .titlebutton.minimize {
-    background-image: url("assets/minimize.png"); }
+    background: url("assets/minimize.png") no-repeat no-repeat; }
     .titlebar .titlebutton.minimize:backdrop {
-      background-image: none; }
+      background: none; }
   .titlebar .titlebutton.maximize {
-    background-image: url("assets/maximize.png"); }
+    background: url("assets/maximize.png") no-repeat no-repeat; }
     .titlebar .titlebutton.maximize:backdrop {
-      background-image: none; }
+      background: none; }
   .tiled .titlebar:not(headerbar), .tiled .titlebar:backdrop:not(headerbar), .maximized .titlebar:not(headerbar), .maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0; }
 
