@@ -125,7 +125,7 @@ style "default"
 		cellstyle	        = 0
 		colorize_scrollbar  = FALSE
 		comboboxstyle       = 0                 # 0 = normal combobox, 1 = colorized combobox below arrow
-		contrast            = 0.2               # 0.8 for less contrast, more than 1.0 for more contrast on borders
+		contrast            = 1.9               # 0.8 for less contrast, more than 1.0 for more contrast on borders
 		default_button_color = mix (0.2, shade(0.9,@base_color), shade (0.9, @selected_bg_color))
 		expanderstyle	    = 0
 		focus_color         = mix (0.1, @bg_color, shade (0.7, @selected_bg_color))
@@ -248,7 +248,7 @@ style "button" = "wider"
 
 	engine "murrine"
 	{
-		contrast            = 1.0
+		contrast            = 1.9
 		highlight_shade     = 1.0
 		lightborder_shade   = 1.0
 		gradient_shades     = {1.0,1.0,1.0,1.0}
@@ -279,7 +279,7 @@ style "notebook" = "notebook-bg"
 	ythickness = 3 # Height of tabs and notebook borders.
 
 	engine "murrine" {
-		contrast		= 1.0
+		contrast		= 1.9
 		gradient_shades		= {1.0,1.0,1.0,1.0}
 		#focusstyle		= 2
 		#lightborder_shade	= 1.16
@@ -313,7 +313,7 @@ style "menu"
 	{
 		roundness = 0 # Roundness of menu items.
 		gradient_shades = {1.0,1.0,1.0,1.0}
-		contrast = 0.001
+		contrast = 1.9
 		lightborder_shade = 1.0
 	}
 }
@@ -371,7 +371,7 @@ style "treeview"
 	{
 		roundness = 0
 		gradient_shades     = {1.0,1.0,1.0,1.0}
-		contrast = 1.0
+		contrast = 1.9
 	}
 }
 
@@ -427,7 +427,7 @@ style "progressbar"
 		trough_shades	= {1.0, 1.0}
 		# trough_border_shades	= { 0.8, 0.7 }
 		roundness 	= 0
-		contrast	= 1.0
+		contrast	= 1.9
 		border_shades	= {1.0, 1.0}
 		lightborder_shade   = 1.0
 		glowstyle	= 0
@@ -448,7 +448,7 @@ style "scrollbar"
 		roundness	= 0
 		border_shades	= {1.0,1.0}
 		trough_shades	= {1.0, 1.0}
-		contrast	= 1.0
+		contrast	= 1.9
 		gradient_shades	= {1.0,1.0,1.0,1.0}
 	}
 }
@@ -482,7 +482,7 @@ style "comboboxentry"
 
 	engine "murrine"
 	{
-		contrast = 1.0
+		contrast = 1.9
 		reliefstyle = 0
 		border_shades = {1.0,1.0}
 		# shadow_shades = {0.5,0.0}
@@ -516,7 +516,7 @@ style "scale" = "button"
 	engine "murrine"
 	{
 		border_shades 		= {1.0, 1.0}
-		contrast			    = 1.0
+		contrast			    = 1.9
 		lightborderstyle	= 1
 		roundness			    = 2
 		trough_shades			= {0.1, 0.1}
@@ -888,7 +888,7 @@ style "toolbar" = "default"
 {
 	engine "murrine"
 	{
-		contrast = 1.0
+		contrast = 1.9
 		lightborder_shade = 1.0
 		gradient_shades = {1.0,1.0,1.0,1.0}
 	}
@@ -905,7 +905,7 @@ style "toolbar-separator" {
 
 
 	engine "murrine" {
-		contrast = 1.0
+		contrast = 1.9
 		separatorstyle = 0
 	}
 }
@@ -956,7 +956,7 @@ style "xfwm-tabwin"
 
 	engine "murrine" {
 		roundness	    = 6
-		contrast            = 0.2
+		contrast            = 1.9
 		highlight_shade     = 1.00
 		lightborder_shade   = 1.0
 		gradient_shades     = {0.9,1.2,1.2,1.4}
