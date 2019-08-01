@@ -243,6 +243,7 @@ style "button" = "wider"
 	bg[NORMAL]        = @base_color
 	bg[PRELIGHT]      = @base_color
 	bg[ACTIVE]        = @selected_bg_color
+	fg[ACTIVE]        = @selected_fg_color
 	#bg[SELECTED]      = shade (0.5, @selected_bg_color)
 	#bg[INSENSITIVE]   = shade (0.95, @bg_color)
 
@@ -1201,6 +1202,7 @@ style "menu_text" = "menu_item" {
 
 # Fixes ugly text shadows for insensitive text
 widget_class "*<GtkLabel>"                                          style "text"
+widget_class "*<GtkCheckButton>*<GtkLabel>"                         style "dark"
 widget_class "*<GtkMenu>*<GtkLabel>"                                style "menu_text" 
 widget_class "*<GtkComboBox>*<GtkCellLayout>"                       style "text"
 widget_class "*<GtkNotebook>*<GtkLabel>"                            style "notebook"
