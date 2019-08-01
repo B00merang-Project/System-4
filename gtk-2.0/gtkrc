@@ -678,7 +678,7 @@ style "radio"
 			function			= BOX
 			state					= PRELIGHT
 			recolorable		= TRUE
-			file					= "assets/button-hover.png"
+			file					= "assets/button-default.png"
 			border				= { 4, 4, 4, 4 }
 			stretch				= TRUE
 		}
@@ -694,7 +694,7 @@ style "radio"
 		{
 			function			= BOX
 			state					= INSENSITIVE
-			file					= "assets/button-insensitive.png"
+			file					= "assets/button-default.png"
 			border				= { 4, 4, 4, 4 }
 			stretch				= TRUE
 		}
@@ -756,7 +756,7 @@ style "check"
 			function        = CHECK
 			state           = INSENSITIVE
 			shadow          = OUT
-			overlay_file    = "assets/checkbox-unchecked-insensitive.png"
+			overlay_file    = "assets/checkbox-unchecked.png"
 			overlay_stretch = FALSE
 		}
 
@@ -854,7 +854,7 @@ style "check"
 			function			= BOX
 			state					= PRELIGHT
 			recolorable		= TRUE
-			file					= "assets/button-hover.png"
+			file					= "assets/button-default.png"
 			border				= { 4, 4, 4, 4 }
 			stretch				= TRUE
 		}
@@ -870,7 +870,7 @@ style "check"
 		{
 			function			= BOX
 			state					= INSENSITIVE
-			file					= "assets/button-insensitive.png"
+			file					= "assets/button-default.png"
 			border				= { 4, 4, 4, 4 }
 			stretch				= TRUE
 		}
