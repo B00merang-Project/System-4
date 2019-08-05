@@ -1170,27 +1170,14 @@ separator {
 spinbutton:not(.vertical) selection, spinbutton:not(.vertical) selection:focus {
   color: #FFFFFF;
   background-color: #000000; }
-spinbutton button, spinbutton entry {
-  border-color: #FFFFFF;
-  background-color: #FFFFFF; }
-  spinbutton button:disabled, spinbutton entry:disabled {
-    color: #4C4C4C;
-    border-color: #FFFFFF;
-    background-color: #FFFFFF; }
-    spinbutton button:disabled:backdrop, spinbutton entry:disabled:backdrop {
-      color: #4C4C4C;
-      border-color: #FFFFFF;
-      background-color: #FFFFFF; }
-  spinbutton button:backdrop, spinbutton entry:backdrop {
-    color: #4C4C4C;
-    border-color: #FFFFFF;
-    background-color: #FFFFFF; }
+spinbutton button:disabled, spinbutton entry:disabled {
+  color: #4C4C4C; }
+  spinbutton button:disabled:backdrop, spinbutton entry:disabled:backdrop {
+    color: #4C4C4C; }
 spinbutton.horizontal entry {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   padding: 7px 15px; }
-  spinbutton.horizontal entry:focus {
-    box-shadow: none; }
 spinbutton.horizontal button.down {
   border-right-width: 0;
   border-left-width: 0;
@@ -1200,8 +1187,6 @@ spinbutton.horizontal button.up {
   border-bottom-left-radius: 0; }
 spinbutton.vertical entry {
   border-radius: 0; }
-  spinbutton.vertical entry:focus {
-    box-shadow: none; }
 spinbutton.vertical button.up {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
