@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=System 4
+Comment=A GTK theme based on Mac's System 4 OS
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=System 4
+MetacityTheme=System 4
+IconTheme=HighContrast
+CursorTheme=DMZ-Black
+ButtonLayout=close,minimize,maximize:
