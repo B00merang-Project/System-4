@@ -443,15 +443,12 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 4px 8px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 4px;
+  border: 1px solid #000000;
   color: #000000;
-  border-color: #000000;
   background-color: #FFFFFF;
-  outline-offset: 1px;
-  outline-width: 3px;
-  outline-style: solid; }
+  background-image: none;
+  box-shadow: none; }
   button:active, button:checked {
     color: #FFFFFF;
     border-color: #000000;
@@ -468,7 +465,9 @@ button {
     border-color: transparent;
     border-radius: 4px;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
     button.flat:hover {
       border-color: #000000;
       color: #000000;
@@ -483,9 +482,7 @@ button {
       background-color: transparent; }
 
 button.destructive-action {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #a30000;
+  border: 1px solid #a30000;
   border-radius: 4px;
   color: #fae6e6;
   background-color: #CC0000; }
@@ -498,10 +495,8 @@ button.destructive-action {
     background-color: #db4d4d; }
 
 button.suggested-action {
-  border-width: 1px;
-  border-style: solid;
   border-radius: 4px;
-  border-color: #000000;
+  border: 1px solid #000000;
   color: #FFFFFF;
   background-color: #000000; }
   button.suggested-action:active, button.suggested-action:checked {
@@ -651,7 +646,9 @@ toolbar {
     border-color: transparent;
     border-radius: 4px;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
     toolbar button.flat:hover {
       border-color: transparent;
       color: #000000;
@@ -794,7 +791,9 @@ headerbar {
     border-color: transparent;
     border-radius: 4px;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
     headerbar button:hover {
       border-color: #000000;
       color: #000000;
@@ -2263,7 +2262,9 @@ menubutton arrow {
   border-color: transparent;
   border-radius: 4px;
   color: #000000;
-  background-color: transparent; }
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
   .toolbar > button:hover,
   .toolbar > :not(.linked) > button:hover,
   .toolbar :not(.linked) > menubutton > button:hover,
