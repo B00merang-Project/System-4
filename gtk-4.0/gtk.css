@@ -759,6 +759,20 @@ headerbar {
   background-image: linear-gradient(to bottom, transparent 35%, #000000 40%, #000000 64%, transparent 85%);
   background-size: 100% 3px;
   box-shadow: inset 0 0 0 3px #FFFFFF; }
+  headerbar .title {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: bold; }
+  headerbar .subtitle {
+    font-size: smaller;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: alpha(currentColor, 0.7); }
+  headerbar .title {
+    background-color: #FFFFFF;
+    box-shadow: 0 10px #FFFFFF, 0 -10px #FFFFFF; }
+  headerbar .subtitle {
+    background-color: #FFFFFF; }
   headerbar:backdrop {
     border-color: #000000;
     color: #000000;
@@ -766,6 +780,8 @@ headerbar {
     background-image: none; }
   .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop {
     border-radius: 0; }
+  headerbar.titlebar, .titlebar headerbar {
+    border-radius: 0px 0px 0px 0px; }
   separator:first-child + headerbar, separator:first-child + headerbar:backdrop, headerbar:first-child, headerbar:first-child:backdrop {
     border-top-left-radius: 0px; }
     .maximized separator:first-child + headerbar, .tiled separator:first-child + headerbar, .maximized separator:first-child + headerbar:backdrop, .tiled separator:first-child + headerbar:backdrop, .maximized headerbar:first-child, .tiled headerbar:first-child, .maximized headerbar:first-child:backdrop, .tiled headerbar:first-child:backdrop {
@@ -774,68 +790,79 @@ headerbar {
     border-top-right-radius: 0px; }
     .maximized headerbar:last-child, .tiled headerbar:last-child, .maximized headerbar:last-child:backdrop, .tiled headerbar:last-child:backdrop {
       border-radius: 0; }
-  headerbar .title {
-    padding-left: 12px;
-    padding-right: 12px;
-    font-weight: bold;
-    background-color: #FFFFFF;
-    box-shadow: 0 10px #FFFFFF, 0 -10px #FFFFFF; }
-  headerbar .subtitle {
-    font-size: smaller;
-    padding-left: 12px;
-    padding-right: 12px;
-    color: alpha(currentColor, 0.7);
-    background-color: #FFFFFF; }
-  headerbar button {
-    padding: 4px 8px;
-    border-radius: 4px;
-    border: 1px solid #000000;
-    color: #000000;
-    background-color: #FFFFFF;
-    background-image: none;
-    box-shadow: none; }
-    headerbar button:active, headerbar button:checked {
-      color: #FFFFFF;
-      border-color: #000000;
-      background-color: #000000; }
-      headerbar button:active:backdrop, headerbar button:checked:backdrop {
-        color: #FFFFFF; }
-      headerbar button:active:disabled, headerbar button:checked:disabled {
-        color: #4C4C4C;
-        border-color: #d9d9d9;
-        background-color: #e6e6e6; }
-    headerbar button:disabled {
-      color: #4C4C4C; }
-  headerbar.titlebar, .titlebar headerbar {
-    border-radius: 0px 0px 0px 0px; }
-
-windowcontrols {
-  border-spacing: 6px; }
-  windowcontrols.start:not(.empty):dir(ltr), windowcontrols.end:not(.empty):dir(rtl) {
-    margin-right: 7px; }
-  windowcontrols.start:not(.empty):dir(rtl), windowcontrols.end:not(.empty):dir(ltr) {
-    margin-left: 7px; }
-  windowcontrols button.close, windowcontrols button.maximize, windowcontrols button.minimize {
-    padding: 0;
-    min-height: 17px;
-    min-width: 17px;
-    border: none;
-    box-shadow: 0 0 0 1px #FFFFFF;
-    border-radius: 0;
-    color: transparent;
-    background-color: transparent;
-    -gtk-icon-shadow: none;
-    background-position: center;
-    background-repeat: no-repeat; }
-    windowcontrols button.close:backdrop, windowcontrols button.maximize:backdrop, windowcontrols button.minimize:backdrop {
-      background: none;
-      box-shadow: none; }
-  windowcontrols button.close {
-    background: url("assets/close.png") 100% 100%; }
-  windowcontrols button.minimize {
-    background: url("assets/minimize.png") 100% 100%; }
-  windowcontrols button.maximize {
-    background: url("assets/maximize.png") 100% 100%; }
+  headerbar windowcontrols {
+    border-spacing: 6px; }
+    headerbar windowcontrols.start:not(.empty):dir(ltr), headerbar windowcontrols.end:not(.empty):dir(rtl) {
+      margin-right: 7px; }
+    headerbar windowcontrols.start:not(.empty):dir(rtl), headerbar windowcontrols.end:not(.empty):dir(ltr) {
+      margin-left: 7px; }
+    headerbar windowcontrols button.close {
+      padding: 0px;
+      min-width: 17px;
+      min-height: 17px;
+      border: none;
+      border-radius: 0;
+      color: transparent;
+      background-color: transparent;
+      background-size: 17px 17px;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 0 0 1px #FFFFFF;
+      -gtk-icon-shadow: none;
+      background-image: url("assets/close.png"); }
+      headerbar windowcontrols button.close:backdrop {
+        background-image: none;
+        box-shadow: none; }
+    headerbar windowcontrols button.maximize {
+      padding: 0px;
+      min-width: 17px;
+      min-height: 17px;
+      border: none;
+      border-radius: 0;
+      color: transparent;
+      background-color: transparent;
+      background-size: 17px 17px;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 0 0 1px #FFFFFF;
+      -gtk-icon-shadow: none;
+      background-image: url("assets/maximize.png"); }
+      headerbar windowcontrols button.maximize:backdrop {
+        background-image: none;
+        box-shadow: none; }
+    headerbar windowcontrols button.minimize {
+      padding: 0px;
+      min-width: 17px;
+      min-height: 17px;
+      border: none;
+      border-radius: 0;
+      color: transparent;
+      background-color: transparent;
+      background-size: 17px 17px;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 0 0 1px #FFFFFF;
+      -gtk-icon-shadow: none;
+      background-image: url("assets/minimize.png"); }
+      headerbar windowcontrols button.minimize:backdrop {
+        background-image: none;
+        box-shadow: none; }
+    .maximized headerbar windowcontrols button.maximize {
+      padding: 0px;
+      min-width: 17px;
+      min-height: 17px;
+      border: none;
+      border-radius: 0;
+      color: transparent;
+      background-color: transparent;
+      background-size: 17px 17px;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 0 0 1px #FFFFFF;
+      -gtk-icon-shadow: none; }
+      .maximized headerbar windowcontrols button.maximize:backdrop {
+        background-image: none;
+        box-shadow: none; }
 
 pathbar > button.text-button, pathbar > button.image-button, pathbar > button {
   padding-left: 4px;
@@ -1082,110 +1109,184 @@ menubar {
       color: #000000;
       background-color: transparent; }
 
-notebook {
-  padding: 0; }
-  notebook.frame {
+notebook.frame {
+  border: 1px solid #000000; }
+
+notebook > stack:not(:only-child) {
+  background-color: #FFFFFF; }
+  notebook > stack:not(:only-child):backdrop {
+    background-color: #FFFFFF; }
+
+notebook > header {
+  background-color: #FFFFFF; }
+  notebook > header:backdrop {
+    background-color: #FFFFFF; }
+  notebook > header.top {
+    box-shadow: 0 1px #000000; }
+  notebook > header.bottom {
+    box-shadow: 0 -1px #000000; }
+  notebook > header.left {
+    box-shadow: 1px 0 #000000; }
+  notebook > header.right {
+    box-shadow: -1px 0 #000000; }
+  notebook > header.top {
     margin: -1px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #000000; }
-    notebook.frame > header {
-      margin: -1px; }
-      notebook.frame > header.top {
-        margin-bottom: 0; }
-      notebook.frame > header.bottom {
-        margin-top: 0; }
-      notebook.frame > header.left {
-        margin-right: 0; }
-      notebook.frame > header.right {
-        margin-left: 0; }
-      notebook.frame > header.top, notebook.frame > header.bottom {
-        padding-left: 0;
-        padding-right: 0; }
-      notebook.frame > header.left, notebook.frame > header.right {
-        padding-top: 0;
-        padding-bottom: 0; }
-  notebook > stack:not(:only-child) {
-    background-color: #FFFFFF; }
-  notebook tab {
+    margin-bottom: 1px; }
+  notebook > header.bottom {
+    margin: -1px;
+    margin-top: 1px; }
+  notebook > header.right {
+    margin: -1px;
+    margin-left: 1px; }
+  notebook > header.left {
+    margin: -1px;
+    margin-right: 1px; }
+  notebook > header.top > tabs > tab {
+    margin: 0px;
     padding: 6px 20px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 0;
-    border-color: transparent;
+    border-radius: 4px;
+    border: 1px solid transparent;
     color: #000000;
-    background-color: transparent; }
-    notebook tab:checked {
-      color: #FFFFFF;
+    background-color: #FFFFFF;
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; }
+    notebook > header.top > tabs > tab:hover {
+      box-shadow: none; }
+    notebook > header.top > tabs > tab:checked {
       border-color: #000000;
-      background-color: #000000; }
-      notebook tab:checked:backdrop {
-        border-color: #000000;
-        background-color: #000000; }
-    notebook tab:backdrop {
-      background-color: transparent; }
-    notebook tab:checked button.flat {
-      color: #FFFFFF; }
-      notebook tab:checked button.flat:hover {
-        color: #000000; }
-      notebook tab:checked button.flat:active {
-        color: #FFFFFF; }
-  notebook > header {
+      background-color: #FFFFFF;
+      box-shadow: none;
+      margin-bottom: -2px; }
+  notebook > header.bottom > tabs > tab {
+    margin: 0px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-top: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px; }
+    notebook > header.bottom > tabs > tab:hover {
+      box-shadow: none; }
+    notebook > header.bottom > tabs > tab:checked {
+      border-color: #000000;
+      background-color: #FFFFFF;
+      box-shadow: none;
+      margin-top: -2px; }
+  notebook > header.left > tabs > tab {
+    margin: 0px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-right: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; }
+    notebook > header.left > tabs > tab:hover {
+      box-shadow: none; }
+    notebook > header.left > tabs > tab:checked {
+      border-color: #000000;
+      background-color: #FFFFFF;
+      box-shadow: none;
+      margin-right: -2px; }
+  notebook > header.right > tabs > tab {
+    margin: 0px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; }
+    notebook > header.right > tabs > tab:hover {
+      box-shadow: none; }
+    notebook > header.right > tabs > tab:checked {
+      border-color: #000000;
+      background-color: #FFFFFF;
+      box-shadow: none;
+      margin-left: -2px; }
+  notebook > header.bottom > tabs > arrow, notebook > header.top > tabs > arrow {
+    margin-left: -5px;
+    margin-right: -5px;
+    padding-left: 4px;
+    padding-right: 4px; }
+    notebook > header.bottom > tabs > arrow.down, notebook > header.top > tabs > arrow.down {
+      -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+    notebook > header.bottom > tabs > arrow.up, notebook > header.top > tabs > arrow.up {
+      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+  notebook > header.right > tabs > arrow, notebook > header.left > tabs > arrow {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    padding-top: 4px;
+    padding-bottom: 4px; }
+    notebook > header.right > tabs > arrow.down, notebook > header.left > tabs > arrow.down {
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+    notebook > header.right > tabs > arrow.up, notebook > header.left > tabs > arrow.up {
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+  notebook > header.top > tabs > arrow {
+    border-top-style: none; }
+  notebook > header.bottom > tabs > arrow {
+    border-bottom-style: none; }
+  notebook > header.left > tabs > arrow {
+    border-left-style: none; }
+  notebook > header.right > tabs > arrow {
+    border-right-style: none; }
+
+tabbar .box {
+  background-color: #FFFFFF; }
+  tabbar .box:backdrop {
     background-color: #FFFFFF; }
-    notebook > header:backdrop {
-      background-color: #FFFFFF; }
-    notebook > header.top {
-      box-shadow: 0 1px #000000; }
-      notebook > header.top > tabs > tab {
-        border-bottom: none; }
-        notebook > header.top > tabs > tab:checked {
-          border-top-left-radius: 4px;
-          border-top-right-radius: 4px; }
-    notebook > header.bottom {
-      box-shadow: 0 -1px #000000; }
-      notebook > header.bottom > tabs > tab {
-        border-top: none; }
-        notebook > header.bottom > tabs > tab:checked {
-          border-bottom-left-radius: 4px;
-          border-bottom-right-radius: 4px; }
-    notebook > header.right {
-      box-shadow: -1px 0 #000000; }
-      notebook > header.right > tabs > tab {
-        border-left: none; }
-        notebook > header.right > tabs > tab:checked {
-          border-top-right-radius: 4px;
-          border-bottom-right-radius: 4px; }
-    notebook > header.left {
-      box-shadow: 1px 0 #000000; }
-      notebook > header.left > tabs > tab {
-        border-right: none; }
-        notebook > header.left > tabs > tab:checked {
-          border-top-left-radius: 4px;
-          border-bottom-left-radius: 4px; }
-  notebook > header.top > tabs > arrow.up, notebook > header.bottom > tabs > arrow.up {
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-    notebook > header.top > tabs > arrow.up:last-child, notebook > header.bottom > tabs > arrow.up:last-child {
-      margin-left: 2px; }
-  notebook > header.top > tabs > arrow.down, notebook > header.bottom > tabs > arrow.down {
-    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-    notebook > header.top > tabs > arrow.down:first-child, notebook > header.bottom > tabs > arrow.down:first-child {
-      margin-right: 2px; }
-  notebook > header.left > tabs > arrow.up, notebook > header.right > tabs > arrow.up {
-    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-    notebook > header.left > tabs > arrow.up:last-child, notebook > header.right > tabs > arrow.up:last-child {
-      margin-top: 2px; }
-  notebook > header.left > tabs > arrow.down, notebook > header.right > tabs > arrow.down {
-    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-    notebook > header.left > tabs > arrow.down:first-child, notebook > header.right > tabs > arrow.down:first-child {
-      margin-bottom: 2px; }
-  notebook > header > tabs > arrow {
-    color: #000000; }
-    notebook > header > tabs > arrow:hover {
-      color: black; }
-    notebook > header > tabs > arrow:active {
-      color: black; }
-    notebook > header > tabs > arrow:disabled {
-      color: #999999; }
+  tabbar .box.top {
+    box-shadow: 0 1px #000000; }
+  tabbar .box.bottom {
+    box-shadow: 0 -1px #000000; }
+  tabbar .box.left {
+    box-shadow: 1px 0 #000000; }
+  tabbar .box.right {
+    box-shadow: -1px 0 #000000; }
+
+tabbar tabbox {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  min-height: 34px; }
+  tabbar tabbox > separator {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transition: opacity 150ms ease-in-out; }
+    tabbar tabbox > separator.hidden {
+      opacity: 0; }
+  tabbar tabbox > revealer > indicator {
+    min-width: 2px;
+    border-radius: 4px;
+    margin: 3px 6px; }
+
+tabbar tab {
+  margin: 0px;
+  padding: 6px 20px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: #000000;
+  background-color: #FFFFFF; }
+  tabbar tab:hover {
+    box-shadow: none; }
+  tabbar tab:selected {
+    border-color: #000000;
+    background-color: #FFFFFF;
+    box-shadow: none;
+    margin-bottom: -2px; }
+  tabbar tab:selected:backdrop {
+    border-color: #000000;
+    background-color: #FFFFFF; }
+  tabbar tab:backdrop {
+    color: #000000;
+    background-color: #FFFFFF; }
+
+tabbar tabbox.single-tab tab, tabbar tabbox.single-tab tab:hover, tabbar tabbox.single-tab tab:active {
+  background: none; }
 
 scrollbar {
   border: none;
