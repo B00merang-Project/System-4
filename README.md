@@ -1,4 +1,4 @@
-[![built-with-azurra-framework](https://github.com/B00merang-Project/Azurra_framework/raw/assets/azurra_framework_smaller.png)](https://github.com/B00merang-Project/Azurra_framework)
+[![built-with-azurra-framework](https://github.com/B00merang-Project/B00merang-Project.github.io/blob/master/resources/badges/azurra/badge_smaller.png)](https://github.com/B00merang-Project/Azurra_framework)
 
 # System 4
 High contrast theme based on the apperance of Mac's System 4 operating system
